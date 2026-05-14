@@ -10,6 +10,7 @@
     "start": "node src/index.js",
     "cli": "node src/cli.js",
     "demo": "node src/cli.js demo",
+    "dashboard": "node src/cli.js dashboard",
     "test": "node tests/test.js",
     "test:e2e": "node tests/e2e.js",
     "test:all": "node tests/test.js && node tests/e2e.js"

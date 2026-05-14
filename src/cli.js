@@ -11,6 +11,7 @@
  *   stats            - 查看统计报告
  *   add <word...>    - 手动添加词语
  *   list             - 查看词库
+ *   dashboard        - 启动学习看板
  *   demo             - 运行完整演示
  */
 
@@ -23,6 +24,7 @@ const ComparisonEngine = require('./comparison');
 const errorBook = require('./errorbook');
 const statsReporter = require('./stats');
 const store = require('./store');
+const Dashboard = require('./dashboard');
 
 const args = process.argv.slice(2);
 const command = args[0] || 'help';
@@ -57,6 +59,10 @@ async function main() {
       break;
     case 'demo':
       await cmdDemo();
+      break;
+    case 'dashboard':
+    case 'web':
+      await cmdDashboard(parseInt(args[1]) || 3939);
       break;
     case 'help':
     default:
@@ -173,6 +179,15 @@ async function cmdDemo() {
   statsReporter.printReport();
 }
 
+async function cmdDashboard(port) {
+  const dashboard = new Dashboard(port);
+  await dashboard.start();
+  console.log(`浏览器打开: http://localhost:${port}`);
+  console.log('按 Ctrl+C 停止');
+  // 保持进程运行
+  await new Promise(() => {});
+}
+
 function printHelp() {
   console.log(`
 ╔══════════════════════════════════════╗
@@ -187,6 +202,7 @@ function printHelp() {
 ║    stats         统计报告             ║
 ║    add <词...>   添加词语             ║
 ║    list          查看词库             ║
+║    dashboard     启动学习看板         ║
 ║    demo          完整演示             ║
 ║    help          帮助                 ║
 ╚══════════════════════════════════════╝
