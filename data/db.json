@@ -1,5 +1,96 @@
 {
-  "vocabulary": [],
+  "vocabulary": [
+    {
+      "id": "mp5af89pf9o6x",
+      "word": "春天",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.109Z"
+    },
+    {
+      "id": "mp5af89qz2zv2",
+      "word": "花朵",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.110Z"
+    },
+    {
+      "id": "mp5af89qou05m",
+      "word": "阳光",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.110Z"
+    },
+    {
+      "id": "mp5af89rula1a",
+      "word": "小鸟",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.111Z"
+    },
+    {
+      "id": "mp5af89rj3pgt",
+      "word": "唱歌",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.111Z"
+    },
+    {
+      "id": "mp5af89s73jut",
+      "word": "温暖",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.112Z"
+    },
+    {
+      "id": "mp5af89thngkt",
+      "word": "发芽",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.113Z"
+    },
+    {
+      "id": "mp5af89us8nz7",
+      "word": "开放",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:06.114Z"
+    },
+    {
+      "id": "mp5afe8rtn8hc",
+      "word": "苹果",
+      "lesson": "",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:30:13.851Z"
+    }
+  ],
   "sessions": [],
   "errorWords": []
 }

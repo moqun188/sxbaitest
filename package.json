@@ -1,13 +1,20 @@
 {
   "name": "sxbaitest",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "听写词语学习系统 - 扫描课本、随机听写、手写比对、错词管理",
   "main": "src/index.js",
+  "bin": {
+    "sxbaitest": "src/cli.js"
+  },
   "scripts": {
     "start": "node src/index.js",
-    "test": "node tests/test.js"
+    "cli": "node src/cli.js",
+    "demo": "node src/cli.js demo",
+    "test": "node tests/test.js",
+    "test:e2e": "node tests/e2e.js",
+    "test:all": "node tests/test.js && node tests/e2e.js"
   },
-  "keywords": ["dictation", "ocr", "education", "vocabulary"],
+  "keywords": ["dictation", "ocr", "education", "vocabulary", "tts"],
   "author": "sxbaitest team",
   "license": "MIT"
 }
