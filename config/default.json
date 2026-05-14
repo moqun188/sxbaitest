@@ -1,0 +1,8 @@
+{
+  "readInterval": 3000,
+  "readRepeat": 2,
+  "readSpeed": "normal",
+  "ocrLanguage": "chi_sim",
+  "matchThreshold": 0.8,
+  "dataPath": "./data/db.json"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sxbaitest",
+  "version": "1.0.0",
+  "description": "听写词语学习系统 - 扫描课本、随机听写、手写比对、错词管理",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node tests/test.js"
+  },
+  "keywords": ["dictation", "ocr", "education", "vocabulary"],
+  "author": "sxbaitest team",
+  "license": "MIT"
+}
