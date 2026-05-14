@@ -1,5 +1,107 @@
 {
-  "vocabulary": [],
+  "vocabulary": [
+    {
+      "id": "mp5bcmzc8a1bw",
+      "word": "苹果",
+      "lesson": "",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:04.824Z"
+    },
+    {
+      "id": "mp5bcqycezyag",
+      "word": "春天",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.972Z"
+    },
+    {
+      "id": "mp5bcqydnfxks",
+      "word": "花朵",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.973Z"
+    },
+    {
+      "id": "mp5bcqyeyvfyd",
+      "word": "阳光",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.974Z"
+    },
+    {
+      "id": "mp5bcqyehxl9w",
+      "word": "小鸟",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.974Z"
+    },
+    {
+      "id": "mp5bcqyfwoxvf",
+      "word": "唱歌",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.975Z"
+    },
+    {
+      "id": "mp5bcqyf7l6z2",
+      "word": "温暖",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.975Z"
+    },
+    {
+      "id": "mp5bcqygpe5kx",
+      "word": "发芽",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.976Z"
+    },
+    {
+      "id": "mp5bcqygjz7fa",
+      "word": "开放",
+      "lesson": "E2E测试课",
+      "unit": "",
+      "source": "manual",
+      "pinyin": "",
+      "meaning": "",
+      "createdAt": "2026-05-14T09:56:09.976Z"
+    }
+  ],
   "sessions": [],
-  "errorWords": []
+  "errorWords": [
+    {
+      "id": "mp5bct4gavlzt",
+      "word": "春天",
+      "written": "春大",
+      "similarity": 0.5,
+      "lesson": "E2E测试",
+      "unit": "",
+      "sessionDate": "2026-05-14T09:56:12.784Z",
+      "createdAt": "2026-05-14T09:56:12.784Z"
+    }
+  ]
 }

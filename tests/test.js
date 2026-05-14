@@ -25,6 +25,11 @@ function assert(condition, name) {
 
 console.log('\n🧪 Sprint 1 + Sprint 2 测试\n');
 
+// ========== 测试数据隔离 ==========
+// 清空上次测试遗留数据，确保干净环境
+store.clear('vocabulary');
+store.clear('errorWords');
+
 // ========== Config 模块 ==========
 console.log('📦 Config 模块:');
 assert(typeof config.get('readInterval') === 'number', '读取 readInterval');
@@ -37,8 +42,8 @@ assert(v.valid === true, '默认配置校验通过');
 
 // ========== DataStore 模块 ==========
 console.log('\n📦 DataStore 模块:');
-assert(store.getCollection('vocabulary').length > 0, 'vocabulary 集合非空');
 const testItem = store.insert('vocabulary', { word: '测试词' });
+assert(store.getCollection('vocabulary').length > 0, 'vocabulary 集合非空');
 assert(testItem.id, 'insert 返回 id');
 assert(testItem.word === '测试词', 'insert 数据正确');
 const found = store.find('vocabulary', w => w.word === '测试词');
