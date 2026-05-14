@@ -9,8 +9,9 @@
    - 正确率趋势：上升/稳定/下降判断
 
 2. **CLI运行器** (`src/cli.js`)
-   - 7个命令：scan/dictation/errors/stats/add/list/demo
+   - 8个命令：scan/dictation/errors/stats/add/list/dashboard/demo
    - demo 命令运行完整流程演示
+   - dashboard 命令启动学习看板（陈总新增）
    - package.json 添加 bin 和 npm scripts
 
 3. **端到端测试** (`tests/e2e.js`)
@@ -21,12 +22,16 @@
 - `2c55c99` - [sprint3] 统计报表 + CLI运行器 + 端到端测试
 
 ### 项目最终状态
-- 10个核心模块
+- 11个核心模块（含陈总的学习看板）
 - 52个测试全部通过
-- 完整CLI工具
+- 完整CLI工具 + Web看板
 - 全部推送到 GitHub
 
 ### 代码风格
 - class + 单例/EventEmitter 模式
 - 日志: `[模块名] 消息`
 - 模块职责单一，通过 require 组合
+
+### 协作备注
+- 陈总完成了学习看板 (src/dashboard/)，基于 stats API 数据可视化
+- CLI 已集成 dashboard 命令

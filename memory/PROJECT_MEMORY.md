@@ -31,6 +31,7 @@
 | 任务 | 负责人 | 状态 |
 |------|--------|------|
 | 统计报表 T-304 | 向博(A) | ✅ |
+| 学习看板 T-304 | 陈总(B) | ✅ |
 | CLI运行器 | 向博(A) | ✅ |
 | 端到端测试 | 向博(A) | ✅ |
 
@@ -46,6 +47,9 @@ src/
 ├── comparison/index.js   ← 比对引擎（Levenshtein编辑距离）
 ├── errorbook/index.js    ← 错词本（频率/复习/导出）
 ├── stats/index.js        ← 统计报表（正确率趋势）
+├── dashboard/            ← 学习看板（Web可视化）
+│   ├── index.js          ← HTTP服务 + RESTful API
+│   └── index.html        ← 深色主题看板UI (Chart.js)
 ├── cli.js                ← CLI命令行工具
 └── index.js              ← 入口：完整流程演示
 ```
@@ -62,6 +66,7 @@ node src/cli.js scan <图片>    # 扫描课本
 node src/cli.js dictation 10  # 听写10个词
 node src/cli.js errors        # 错词本
 node src/cli.js stats         # 统计报告
+node src/cli.js dashboard     # 启动学习看板 (端口3939)
 node src/cli.js add 词语1 词语2  # 手动添加
 node src/cli.js list          # 查看词库
 ```

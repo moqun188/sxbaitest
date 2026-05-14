@@ -3,7 +3,7 @@
 ## 基本信息
 - **角色**: 数据层/业务逻辑开发
 - **分支**: feature/dev-b-陈总
-- **负责模块**: 数据存储、词语管理
+- **负责模块**: 数据存储、词语管理、学习看板
 
 ## Sprint 1 工作记录 (2026-05-14)
 
@@ -25,15 +25,27 @@
 ### 提交记录
 - `c9b6313` - [store+vocabulary] 数据存储层 + 词语管理CRUD
 
-### 代码风格偏好
+## Sprint 3 工作记录 (2026-05-14)
+
+### 完成任务
+3. **T-304 学习看板** (`src/dashboard/`)
+   - `index.js`: HTTP 服务，RESTful API（/api/report, /api/vocabulary, /api/errors, /api/errors/top, /api/sessions）
+   - `index.html`: 深色主题可视化看板，Chart.js 图表
+   - 顶部4个统计卡片：词库总量、错词总数、正确率、学习趋势
+   - 课程分布饼图 + 高频错词TOP柱状图 + 错词明细表 + 课程详情表
+   - 30秒自动刷新，响应式布局
+   - CLI 集成: `node src/cli.js dashboard [port]`
+
+4. **测试修复**: 测试隔离问题（清空遗留数据，34/34通过）
+
+### 提交记录
+- `038401e` - [test] 修复测试隔离问题
+- `9ad6631` - [sprint3] T-304 学习看板
+
+### 代码风格
 - 使用 class + 单例模式
 - 日志格式: `[模块名] 消息`
 - 返回结果用 { success, data/error } 格式
-
-### 下一步计划 (Sprint 2)
-- T-203: TTS朗读引擎（调用系统TTS或Web Speech API）
-- T-204: 随机听写控制器（结合 getRandomWords + readInterval）
-- 与向博的OCR模块对接（接收词语列表入库）
 
 ### 协作备注
 - 向博的OCR识别结果会调用我的 addWords() 批量入库
