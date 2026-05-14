@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/dashboard/dashboard",
+    "pages/words/words",
+    "pages/errors/errors",
+    "pages/settings/settings"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0f172a",
+    "navigationBarTitleText": "听写学习看板",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0f172a",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json"
+}

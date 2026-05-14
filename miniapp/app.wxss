@@ -1,0 +1,175 @@
+/* app.wxss - 全局样式 */
+page {
+  background: #0f172a;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Noto Sans SC', sans-serif;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+/* 卡片 */
+.card {
+  background: #1e293b;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  border: 1rpx solid rgba(255,255,255,0.05);
+}
+
+.card-title {
+  font-size: 24rpx;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 2rpx;
+  margin-bottom: 16rpx;
+}
+
+/* 统计网格 */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+}
+
+.stat-card {
+  background: #1e293b;
+  border-radius: 24rpx;
+  padding: 28rpx;
+  border: 1rpx solid rgba(255,255,255,0.05);
+}
+
+.stat-label {
+  font-size: 22rpx;
+  color: #94a3b8;
+  margin-bottom: 12rpx;
+}
+
+.stat-value {
+  font-size: 64rpx;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-sub {
+  font-size: 22rpx;
+  color: #94a3b8;
+  margin-top: 8rpx;
+}
+
+/* 标签 */
+.badge {
+  display: inline-block;
+  padding: 4rpx 20rpx;
+  border-radius: 30rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+}
+.badge-up { background: rgba(74,222,128,0.15); color: #4ade80; }
+.badge-down { background: rgba(251,113,133,0.15); color: #fb7185; }
+.badge-stable { background: rgba(251,191,36,0.15); color: #fbbf24; }
+
+/* 进度条 */
+.progress-bar {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10rpx;
+  height: 16rpx;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+/* 列表项 */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid rgba(255,255,255,0.05);
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.rank {
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 28rpx;
+  width: 60rpx;
+}
+
+.word-text {
+  font-size: 32rpx;
+  font-weight: 600;
+  flex: 1;
+  margin-left: 16rpx;
+}
+
+.error-count {
+  color: #fb7185;
+  font-size: 26rpx;
+}
+
+/* 页面标题 */
+.page-title {
+  font-size: 40rpx;
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 8rpx;
+}
+
+.page-subtitle {
+  font-size: 24rpx;
+  color: #94a3b8;
+  margin-bottom: 32rpx;
+}
+
+/* 按钮 */
+.btn-primary {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #fff;
+  border: none;
+  border-radius: 16rpx;
+  padding: 24rpx 48rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #38bdf8;
+  border: 2rpx solid #38bdf8;
+  border-radius: 16rpx;
+  padding: 24rpx 48rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* 分割线 */
+.divider {
+  height: 1rpx;
+  background: rgba(255,255,255,0.05);
+  margin: 24rpx 0;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 80rpx 40rpx;
+  color: #94a3b8;
+}
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 24rpx;
+}
+.empty-text {
+  font-size: 28rpx;
+}

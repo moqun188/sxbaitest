@@ -1,0 +1,48 @@
+<!-- pages/errors/errors.wxml -->
+<view class="container">
+  <view class="page-title">❌ 错词本</view>
+  <view class="page-subtitle">{{errorStats.uniqueWords}} 个不重复词，共 {{errorStats.total}} 次错误</view>
+
+  <!-- 错词列表 -->
+  <view class="card">
+    <view wx:if="{{topErrors.length === 0}}" class="empty-state">
+      <view class="empty-icon">🎉</view>
+      <view class="empty-text">暂无错词，继续保持！</view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{topErrors}}" wx:key="word" class="list-item">
+        <text class="rank">#{{index + 1}}</text>
+        <view style="flex:1;margin-left:16rpx">
+          <view>
+            <text class="word-text">{{item.word}}</text>
+            <text style="font-size:22rpx;color:#fb7185;margin-left:12rpx">→ {{item.errors[0]}}</text>
+          </view>
+          <view class="progress-bar" style="margin-top:8rpx">
+            <view class="progress-fill" style="width:{{item.percent}}%;background:#fb7185"></view>
+          </view>
+        </view>
+        <text class="error-count">{{item.count}} 次</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最近错误记录 -->
+  <view class="card">
+    <view class="card-title">📝 最近错误记录</view>
+    <view wx:if="{{recentErrors.length === 0}}" class="empty-state">
+      <view class="empty-text">暂无记录</view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{recentErrors}}" wx:key="id" class="list-item">
+        <text style="color:#94a3b8;font-size:24rpx">{{item.date}}</text>
+        <text class="word-text" style="text-align:center">{{item.word}}</text>
+        <text style="color:#fb7185;font-size:24rpx">写成 "{{item.errorText}}"</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 清空按钮 -->
+  <view class="btn-outline" style="text-align:center;margin-top:16rpx" bindtap="clearErrors">
+    清空错词本
+  </view>
+</view>

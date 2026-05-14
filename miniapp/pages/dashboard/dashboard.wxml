@@ -1,0 +1,95 @@
+<!-- pages/dashboard/dashboard.wxml -->
+<view class="container">
+  <!-- 标题 -->
+  <view class="page-title">📚 听写学习看板</view>
+  <view class="page-subtitle">sxbaitest · 数据概览</view>
+
+  <!-- 统计卡片 2x2 -->
+  <view class="stat-grid">
+    <view class="stat-card">
+      <view class="stat-label">📚 词库总量</view>
+      <view class="stat-value" style="color:#38bdf8">{{stats.totalWords}}</view>
+      <view class="stat-sub">个词语</view>
+    </view>
+    <view class="stat-card">
+      <view class="stat-label">❌ 错词数</view>
+      <view class="stat-value" style="color:#fb7185">{{stats.uniqueErrorWords}}</view>
+      <view class="stat-sub">共 {{stats.totalErrors}} 次错误</view>
+    </view>
+    <view class="stat-card">
+      <view class="stat-label">📈 正确率</view>
+      <view class="stat-value" style="color:#4ade80">{{stats.currentAccuracy}}%</view>
+      <view class="stat-sub">平均 {{stats.avgAccuracy}}%</view>
+    </view>
+    <view class="stat-card">
+      <view class="stat-label">📊 趋势</view>
+      <view class="stat-value">
+        <view class="badge {{trendClass}}">{{trendText}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 课程分布 -->
+  <view class="card" style="margin-top:24rpx">
+    <view class="card-title">📖 课程词语分布</view>
+    <view wx:for="{{stats.lessons}}" wx:key="name" class="lesson-bar">
+      <view class="lesson-info">
+        <text class="lesson-name">{{item.name}}</text>
+        <text class="lesson-count">{{item.count}} 个</text>
+      </view>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width:{{item.percent}}%;background:{{item.color}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 高频错词 TOP -->
+  <view class="card">
+    <view class="card-title">🔥 高频错词 TOP</view>
+    <view wx:if="{{stats.topErrors.length === 0}}" class="empty-state">
+      <view class="empty-icon">✅</view>
+      <view class="empty-text">暂无错词记录</view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{stats.topErrors}}" wx:key="word" class="list-item">
+        <text class="rank">#{{index + 1}}</text>
+        <text class="word-text">{{item.word}}</text>
+        <text class="error-count">错 {{item.count}} 次</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 学习记录 -->
+  <view class="card">
+    <view class="card-title">📝 最近听写记录</view>
+    <view wx:if="{{stats.recentSessions.length === 0}}" class="empty-state">
+      <view class="empty-icon">📝</view>
+      <view class="empty-text">暂无听写记录</view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{stats.recentSessions}}" wx:key="id" class="list-item">
+        <text style="color:#94a3b8;font-size:24rpx">{{item.date}}</text>
+        <text style="flex:1;text-align:center">{{item.count}} 词</text>
+        <view class="badge {{item.accuracy >= 80 ? 'badge-up' : item.accuracy >= 60 ? 'badge-stable' : 'badge-down'}}">
+          {{item.accuracy}}%
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导航入口 -->
+  <view class="nav-grid">
+    <navigator url="/pages/words/words" class="nav-item">
+      <text class="nav-icon">📚</text>
+      <text class="nav-text">词库管理</text>
+    </navigator>
+    <navigator url="/pages/errors/errors" class="nav-item">
+      <text class="nav-icon">❌</text>
+      <text class="nav-text">错词本</text>
+    </navigator>
+    <navigator url="/pages/settings/settings" class="nav-item">
+      <text class="nav-icon">⚙️</text>
+      <text class="nav-text">设置</text>
+    </navigator>
+  </view>
+</view>

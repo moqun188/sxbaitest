@@ -1,0 +1,42 @@
+<!-- pages/words/words.wxml -->
+<view class="container">
+  <view class="page-title">📚 词库管理</view>
+  <view class="page-subtitle">共 {{words.length}} 个词语</view>
+
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="搜索词语..." bindinput="onSearch" value="{{keyword}}" />
+  </view>
+
+  <!-- 课程筛选 -->
+  <scroll-view scroll-x class="filter-scroll">
+    <view class="filter-item {{filter === '' ? 'active' : ''}}" bindtap="setFilter" data-filter="">全部</view>
+    <view wx:for="{{lessons}}" wx:key="name"
+          class="filter-item {{filter === item.name ? 'active' : ''}}"
+          bindtap="setFilter" data-filter="{{item.name}}">
+      {{item.name}} ({{item.count}})
+    </view>
+  </scroll-view>
+
+  <!-- 词语列表 -->
+  <view class="card">
+    <view wx:if="{{filteredWords.length === 0}}" class="empty-state">
+      <view class="empty-icon">🔍</view>
+      <view class="empty-text">没有找到词语</view>
+    </view>
+    <view wx:for="{{filteredWords}}" wx:key="id" class="list-item">
+      <text class="rank" style="color:#818cf8">{{index + 1}}</text>
+      <view style="flex:1;margin-left:16rpx">
+        <text class="word-text">{{item.word}}</text>
+        <text style="font-size:22rpx;color:#94a3b8;display:block;margin-top:4rpx">{{item.lesson || '未分类'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加词语 -->
+  <view class="card">
+    <view class="card-title">➕ 手动添加</view>
+    <input class="add-input" placeholder="输入词语" value="{{newWord}}" bindinput="onNewWordInput" />
+    <view class="btn-primary" style="margin-top:16rpx" bindtap="addWord">添加</view>
+  </view>
+</view>

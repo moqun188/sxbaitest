@@ -1,0 +1,45 @@
+/* pages/dashboard/dashboard.wxss */
+
+.lesson-bar {
+  margin-bottom: 20rpx;
+}
+.lesson-bar:last-child {
+  margin-bottom: 0;
+}
+.lesson-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+.lesson-name {
+  font-size: 26rpx;
+  font-weight: 600;
+}
+.lesson-count {
+  font-size: 24rpx;
+  color: #94a3b8;
+}
+
+/* 导航网格 */
+.nav-grid {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 16rpx;
+}
+.nav-item {
+  flex: 1;
+  background: #1e293b;
+  border-radius: 24rpx;
+  padding: 32rpx 16rpx;
+  text-align: center;
+  border: 1rpx solid rgba(255,255,255,0.05);
+}
+.nav-icon {
+  font-size: 48rpx;
+  display: block;
+  margin-bottom: 12rpx;
+}
+.nav-text {
+  font-size: 24rpx;
+  color: #94a3b8;
+}

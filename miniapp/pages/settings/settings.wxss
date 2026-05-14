@@ -1,0 +1,20 @@
+/* pages/settings/settings.wxss */
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid rgba(255,255,255,0.05);
+}
+.setting-item:last-child {
+  border-bottom: none;
+}
+.setting-label {
+  font-size: 28rpx;
+  color: #f1f5f9;
+}
+.setting-value {
+  font-size: 28rpx;
+  color: #94a3b8;
+}
